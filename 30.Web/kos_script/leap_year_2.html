@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript">
+		
+			$(document).ready(function(){
+				
+				alert("	jQuery 함수 시작해슴!	>>> : ");
+				console.log("	jQuery 함수 시작해슴!	>>> : " );
+				
+				var year = new Date().getFullYear();
+				
+				alert("	올 해 연도는 ?	>>> : " + year);
+				console.log("	올 해 연도는  ?	>>> : " + year);
+				
+				$("#mbirth").change(function (){
+					
+					$("#mbirth_1").empty();
+					
+					for( c = 1; c < 13; c++ ) {
+						var option = $("<option value = " + "'" + c + "'" + ">" + c + "</option>");
+						$('#mbirth_1').append(option);
+					}
+				});
+				
+				$("#mbirth_1").change(function(){
+					
+					var y = $("#mbirth").val();
+					var m = $("#mbirth_1").val();
+					
+					var d = new Date(y, m, 0).getDate();
+					
+					$("#mbirth_2").empty();
+					
+					for( c = 1; c < d + 1; c++ ) {
+						
+						var option = $("<option value = " + "'" + c + "'" + ">" + c + "</option>");
+						$("#mbirth_2").append(option);
+					}
+				});
+			});
+		
+		</script>
+	</head>
+	<body>
+		<select class = "mbirth" name = "mbirth" id = "mbirth" style = "width:150px">
+			<option value = "연도를 선택하세요"> 연도를 선택하세요</option>
+			<option value = "2022">2022</option>
+			<option value = "2021">2021</option>
+			<option value = "2020">2020</option>
+			<option value = "2019">2019</option>
+			<option value = "2018">2018</option>
+			<option value = "2017">2017</option>	
+		</select>
+		
+		<select class = "mbirth_1" name = "mbirth_1" id = "mbirth_1" style = "width:100px"></select>
+		<select class = "mbirth_2" name = "mbirth_2" id = "mbirth_2" style = "width:100px"></select>
+
+	</body>
+</html>

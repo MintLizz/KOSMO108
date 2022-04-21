@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script type = "text/javascript">
+		
+			var year = new Date().getFullYear();
+			console.log("	year 는 ?	>>> : " + year);
+			alert("	year 는 ?	>>> : " + year);
+			
+			// 0부터 나온 이유
+			// month 인덱스는 0부터 시작한다.
+			var month =  new Date().getMonth();
+			month = month + 1;
+			console.log("	month 는 ?	>>> : " + month);
+			alert("	month 는 ?	>>> : " + month);
+			
+			var day = new Date().getDate();
+			console.log("	day 는 ?	>>> : " + day);
+			alert("	day 는 ?	>>> : " + day);	
+			
+			// var now = Date(); 도 가능
+			// getDate() 메소드는 주어진 날짜의 현지 시간 기준 일을 반환한다.
+			var day2 = new Date(year, month, 0).getDate();
+			console.log("	day2 는 ?	>>> : " + day2);
+			alert("	day2 는 ?	>>> : " + day2);	
+			console.log("	dat2 JSON은 ?	>>> : " + JSON.stringify(day2));
+			
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

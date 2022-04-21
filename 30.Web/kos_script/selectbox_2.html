@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>SELECTBOX_2 HASSEUM!!</title>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript">
+		
+		$(document).ready(function(){
+			
+			$("#select_1").change(function(){
+				
+				var v = [0, 1, 2, 3];
+				
+				
+				v[1] = ["양천구", "강서구", "금천구"];
+				v[2] = ["안양시", "부천시", "성남시", "구리시"];
+				v[3] = ["남동구", "연수구", "강화군", "계양구"];
+				
+				alert("	select_1 은 ?	>>> : " + select_1);
+				console.log("	select_1 은 ?	>>> : " + select_1);
+				
+				var changeItem;
+				
+				var slen = $(".select_1 option").length;
+				alert("	slen 은 ?	>>> : " + slen);
+				console.log("	slen 은 ?	>>> : " + slen);
+				
+				
+				for ( m = 0; m < slen; m++ ) {
+					
+					var sval = $(".select_1 option:selected").val();
+					alert("	sval 은 ?	>>> : " + sval);
+					console.log("	sval 은 ?	>>> : " + sval);
+					
+					alert("	m 의 값은 ?	>>> : " + m);
+					console.log("	m 의 값은 ?	>>> : " + m);
+					
+					if (m == sval) {
+						
+						changeItem = v[m];
+					}
+				}
+				
+				alert("	changeItem 의 값은 ?	>>> : " + changeItem);
+				console.log("	changeItem 의 값은 ?	>>> : " + changeItem);
+				
+				$("#select_2").empty();
+				
+				for ( c = 0; c < changeItem.length; c++ ) {
+					
+					var option = $("<option value = " + "'" + c + "'" + ">" + changeItem[c] + "</option>");
+					$("#select_2").append(option);
+					
+				}
+			});
+			
+			$("#select_2").change(function(){
+				
+				var  v0 = [0, 1, 2];
+				v0[0] = ["목동", "신정동", "신월동"];
+				v0[1] = ["염창동", "화곡본동", "발산동", "공항동"];
+				v0[2] = ["가산동", "독산동", "시흥동"];
+				
+				var v1 = [0, 1, 2, 3];
+				v1[0] = ["만안구", "동안구"];
+				v1[1] = ["부천동", "중동", "상동", "소사본동"];
+				v1[2] = ["수정구", "중원구", "분당구"];
+				v1[3] = ["갈매동", "동구동", "인창동"];
+				
+				var v2 = [0, 1, 2, 3];
+				v2[0] = ["구월동", "만수동", "간석동"];
+				v2[1] = ["연수동", "신학동", "송도동", "동춘동"];
+				v2[2] = ["하점면", "내가면", "교동면", "삼사면"];
+				v2[3] = ["계산동", "효성동", "계양동", "작전동"];
+				
+				alert("	select_2 는 ?	>>> : " + select_2);
+				console.log("	select_2 는 ?	>>> : " + select_2);
+				
+				var changeItem;
+				
+				var sval = $(".select_2 option:selected").text();
+				
+				alert("	sval 은 ?	>>> : " + sval);
+				console.log("	sval 은 ?	>>> : " + sval);
+				
+				if ('양천구' == sval || '강서구' == sval || '금천구' == sval){
+					
+					alert("	sval 은 ?	>>> : " + sval);
+					console.log("	sval 은 ?	>>> : " + sval);
+					
+					var slen = $(".select_2 option").length;
+					
+					alert("	slen 은 ?	>>> : " + slen);
+					console.log("	slen 은 ?	>>> : " + slen);
+					
+					for ( m = 0; m < slen; m++) {
+						
+						var sval = $(".select_2 option:selected").val();
+						alert("	sval 은 ?	>>> : " + sval);
+						console.log("	sval 은 ?	>>> : " + sval);
+						
+						if ( m == sval ) {
+						
+							changeItem = v0[m];
+							
+							alert("	changeItem 은 ?	>>> : " + changeItem);
+							console.log("	changeItem 은 ?	>>> : " + changeItem);
+						}
+					}
+				}
+				
+				if ("안양시" == sval || "부천시" == sval || "성남시" == sval ||  "구리시" == sval){
+					
+					alert("	sval 은 ?	>>> : " + sval);
+					console.log("	sval 은 ?	>>> : " + sval);
+					
+					var slen = $(".select_2 option").length;
+					
+					alert("	slen 은 ?	>>> : " + slen);
+					console.log("	slen 은 ?	>>> : " + slen);
+					
+					for ( m = 0; m < slen; m++) {
+						
+						var sval = $(".select_2 option:selected").val();
+						alert("	sval 은 ?	>>> : " + sval);
+						console.log("	sval 은 ?	>>> : " + sval);
+						
+						if ( m == sval ) {
+						
+							changeItem = v1[m];
+							
+							alert("	changeItem 은 ?	>>> : " + changeItem);
+							console.log("	changeItem 은 ?	>>> : " + changeItem);
+						}
+					}
+				}
+				
+				if ("남동구" == sval || "연수구" == sval || "강화군" == sval ||  "계양구" == sval){
+					
+					alert("	sval 은 ?	>>> : " + sval);
+					console.log("	sval 은 ?	>>> : " + sval);
+					
+					var slen = $(".select_2 option").length;
+					
+					alert("	slen 은 ?	>>> : " + slen);
+					console.log("	slen 은 ?	>>> : " + slen);
+					
+					for ( m = 0; m < slen; m++) {
+						
+						var sval = $(".select_2 option:selected").val();
+						alert("	sval 은 ?	>>> : " + sval);
+						console.log("	sval 은 ?	>>> : " + sval);
+						
+						if ( m == sval ) {
+						
+							changeItem = v2[m];
+							
+							alert("	changeItem 은 ?	>>> : " + changeItem);
+							console.log("	changeItem 은 ?	>>> : " + changeItem);
+						}
+					}
+				}
+				
+				$("select_3").empty();
+				
+				for (c = 0; c < changeItem.length; c++) {
+					
+					var option = $("<option value = " + "'" + c + "'" + ">" + changeItem[c] + "</option>");
+					$("#select_3").append(option);
+				}
+			});
+		});
+		
+		
+		</script>
+		
+	</head>
+	<body>
+		<select class = "select_1" name = "select_1" id = "select_1" style = "width:150px">
+		<option value = "0">지역을 선택하세요</option>
+		<option value = "1">서울</option>
+		<option value = '2'>경기</option>
+		<option value = "3">인천</option>
+				
+		</select>
+		
+		<select class = "select_2" name = "select_2" id = "select_2" style = "width:150px">
+		</select>
+		
+		<select class = "select_3" name = "select_3" id = "select_3" style = "width:150px">
+		</select>
+	</body>
+</html>

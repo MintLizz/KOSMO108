@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+
+				
+				// 이거는 윤년 계산방식
+				// var year = "2020";
+				// alert(year);
+				// 4년에 1번 오는 그 날 2월 29일을 말하는 것
+				
+				function leapYear(year){
+					if (( year % 4 == 0) && ( year % 100 != 0) || ( year % 400 == 0)){
+						
+						return 1;
+						
+					}else {
+						
+						return 0;
+						
+					}
+				}
+				
+				// 생년월일을 작성한다.
+				$("#mbirth").on("input",function(){
+					var m = $("#mbirth");
+					if (m.val().length > m.maxlength) {
+						m.value = m.value.slice(0, m.maxlength);
+					}
+				});
+				
+				// 여기는 월이다.
+				$("#mbirth1").append("<option value=''>월 --- </option>");
+				for (var i = 1; i <= 12; i++ ) {
+					if (i < 10) {i = '0' + i;}
+					$("#mbirth1").append("<option value='" + i + "'>" + i + "</option>")
+				}
+				
+				// 여기서는 일이다.
+				$("#mbirth2").append("<option value=''>일 --- </option>");
+				for (var i = 1; i <= 31; i++) {
+					if (i < 10) {i = '0' + i; }
+					$("#mbirth2").append("<option value='"+ i +"'>"+ i + "</option>");
+				}
+			});
+			
+		</script>
+	</head>
+	<body>
+		<form name = "memForm" id = "memForm">
+		
+			<input type = "text" name = "mbirth" id = "mbirth" placeholder = "년(4자)" maxlength = "4" style = "width:50px"/>
+			<select name = "mbirth1" id = "mbirth1"></select>
+			<select name = "mbirth2" id = "mbirth2"></select><br>	
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
