@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>XML Parser 해슴!</title>
+		<style type = "text/css"></style>
+			<script>
+				function parseText(){
+					
+					var xmlText, xmlParser, xmlDoc;
+					
+					
+					// 이것을 평문이라고 한다 : plain text
+					xmlText = "<country>"
+							+ "<name>korea</name>"
+							+ "<capital>seoul</capital>"
+							+ "</country>"
+					
+							
+					// 인스턴스 한다 = 새로운 주소를 만든다.
+					xmlParser = new DOMParser();
+					
+					xmlDoc = xmlParser.parseFromString(xmlText, "text/xml");
+					
+					document.getElementById("text").innerHTML = 
+						xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue
+						+ "의 수도는 ? " + 
+						xmlDoc.getElementsByTagName("capital")[0].childNodes[0].nodeValue + " 입니다.";
+				}
+			</script>			
+	</head>
+	<body>
+		<h3>문자열 파싱</h3>
+		<hr>
+		<button onclick="parseText()">파싱하기!</button> 
+		<p id="text"></p> 
+	
+	</body>
+</html>

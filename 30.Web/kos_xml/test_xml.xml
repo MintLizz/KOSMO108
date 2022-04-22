@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<country>
+	
+	<!-- 이거는 name의 차일드는 korea이다. -->
+	<name>KOREA</name>
+	<capital>seoul</capital>
+</country>

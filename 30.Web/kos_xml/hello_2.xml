@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+
+	<dictionary>
+		<term>
+			<entry>볼드</entry>
+			<description>
+				글씨 굵기를 굵은 글씨로 강조함.	<b>...</b>	태그를 사ㅏ용함. <b> 대신 <strong>도 사용함.
+			</description>
+		</term>
+	</dictionary>
+	
+	위의 <b>와 <strong>은 태그가 아닌 문자로 인식하고 싶은데 xml이 <descrption> 태그를 인식하기 때문에
+	그 안에 있는 <b>태그와 <strong> 태그도 인식했다.
+	
+	그래서 이 두 태그를 인식하는 것을 막기 위해 CDATA <![CDATA[]]>를 사용했다.
+ -->
+ 
+ <!-- 
+ 	CDATA : Character Data : 씨데이터 섹션
+ 	<![CDATA[]]>
+ 
+  -->
+  <!--
+  <dictionary>
+  	<term>
+  		<entry>
+  			글씨 볼드 굵음
+  		</entry>
+  		
+  		<description>
+  			<![CDATA[
+				글씨 굵기를 굵게 강조할 수 있다.	<b>...</b> 태그를 사용함. 그리고 <b> 말고도 <strong> 태그도 가능하다.  			
+  			]]>
+  		</description>
+  	</term>
+  </dictionary>
+  
+   -->
+   
+   
+    <dictionary>
+  	<term>
+  		<entry>
+  			글씨 볼드 굵음
+  		</entry>
+  		
+  		%lt;description%gt;
+				글씨 굵기를 굵게 강조할 수 있다.	%lt;b%gt;...%lt;/b%gt; 태그를 사용함. 그리고  %lt;b%gt; 말고도  %lt;strong%gt; 태그도 가능하다. 			
+  		%lt;/description%gt;
+  	</term>
+  </dictionary>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+
+	문서 헤더다 
+	
+
+-->
+
+<root>
+	<level1>
+		xml document
+	</level1>
+
+</root>
+
+<!-- dom 파서는 문서 전체를 읽는다. -->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<kosmo108>
+	<title>빅데이터 기반 인공지능 융합 서비스 개발자 양성과정 해슴!</title>
+	<delivery>
+		2022년  01월 24일 ~ 2022년 07월 20일
+	</delivery>
+	
+	
+	<total>23</total>
+	<user>
+		<name>박성훈</name>
+		<age>27살</age>
+		<gender>남자</gender>
+	</user>
+	
+	<user>
+		<name>김별</name>
+		<age>22살</age>
+		<gender>여자</gender>
+	</user>
+
+	<user>
+		<name>강민</name>
+		<age>32살</age>
+		<gender>남자</gender>
+	</user>
+</kosmo108>
