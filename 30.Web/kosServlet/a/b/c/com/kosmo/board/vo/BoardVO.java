@@ -10,8 +10,9 @@ public class BoardVO {
 	private String deleteyn;
 	private String insertdate;
 	private String updatedate;
-	
-	
+
+	// 디폴트 만드는 이유
+	// 매개변수 없는 데이터 받기 위해서
 	public BoardVO() {
 		
 	}
@@ -30,9 +31,6 @@ public class BoardVO {
 		this.insertdate = insertdate;
 		this.updatedate = updatedate;
 	}
-	
-	// 디폴트 만드는 이유
-	// 매개변수 없는 데이터 받기 위해서
 	
 	// getter
 	public String getBnum() {
