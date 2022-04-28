@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript">
+		
+			$(document).ready(function(){
+				
+				$("#bpw").on("input", function(){
+					
+					var m = $("#bpw");
+					if (m.val().length > m.maxlength){
+						m.value = m.value.slice(0, m.maxlength);
+					}		
+				});
+				
+				alert("	jQuery 함수 시작해슴!");
+				console.log("	jQuery 함수 시작해슴!");
+				
+				$("#boardBtn").on('click', function(){
+					
+					alert("	작성 버튼 눌렀음!	>>> : " + boardBtn);
+					console.log("	작성 버튼 눌렀음!	>>> : " + boardBtn);
+					
+					$('#boardForm').attr({
+						"action":"/kosServlet/board",
+						"method":"GET",
+						"enctype":"application/x-www-form-urlencoded"
+					}).submit();
+				});
+			});
+			
+			
+		</script>
+	</head>
+	<body>
+		<h3>board.html</h3>
+		<hr>
+		<form name = "boardForm" class = "boardForm" id = "boardForm" >
+			<table>
+			<!--  
+				table을 선언해야 tr td를 사용할 수 있다. 
+				form 태그의 name에 attr 요소 정보가 들어가있다.
+			-->
+				
+				<tr>
+					<td>글 번호</td>
+					<td>
+					
+					<!--	readonly는 서버로 보낼 수 있지만,	disable은 서버를 보낼 수 없다.
+						 			는 키인을 할 수 있지만,			       는 키인을 할 수 없다. 
+					-->
+					
+						<input type = "text" class = "bnum" id = "bnum" name = "bnum" style = "width:225px;"
+							  	placeholder = "글 번호" readonly/>
+					</td>
+				</tr>
+				<tr>
+					<td>글 제목</td>
+					<td>
+						<input type = "text" class = "bsubject" id = "bsubject" name = "bsubject" style = "width:225px;"
+								placeholder = "글 제목"/>
+					</td>
+				</tr>
+				<tr>
+					<td>글 작성자</td>
+					<td>
+						<input type = "text" class = "bwriter" id = "bwriter" name = "bwriter" style = "width:225px; background-color:#e6e6e6;"
+								placeholder = "글 작성자" />
+					</td>
+				</tr>
+				<tr>
+					<td>글 비밀번호</td>
+					<td>
+						<input type = "text" class = "bpw" id = "bpw" name = "bpw" style = "width:225px;" 
+								placeholder = "글 비밀번호" maxlength="8" />
+					</td>
+				</tr>
+				<tr>
+					<td>글 내용</td>
+					<td>
+						<textarea class = "bmemo" id = "bmemo" name = "bmemo" cols = "30" rows = "10"></textarea>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>작성</td>
+					<td>	
+						<!--  hidden : 히든 플래그  -->
+						<input type="hidden" name="isudType" id="isudType" value="I" />
+						<input type = "image" class = "boardBtn" id = "boardBtn" name = "boardBtn" 
+								value = "글쓰기" src = "/kosServlet/img/img_mando/ma-gao.gif" width = "50" height = "50"/>
+								
+						<button type = "reset" >
+							<img src = "/kosServlet/img/img_mando/hate.gif" width = "50" height = "50">
+						</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
