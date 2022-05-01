@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+		
+		<style type = "text/css"> 
+			.mem{ text-align : center; }
+		</style>
+		<script type = "text/javascript">
+		
+			$(document).ready(function(){
+				
+				alert("	conformFun() 함수 진입 해슴!	>>> : ");
+				console.log("	conformFun() 함수 진입 해슴!	>>> :	");
+				
+				$(document).on('click', '#mnameBtn', function(){
+					
+					alert("	mnameBtn 버튼 클릭해슴!	>>> : " + mnameBtn);
+					console.log("	mnameBtn 버튼 클릭해슴!	>>> : " + mnameBtn);
+					
+					let name = /^[a-zA-z]+$/;
+					let nameVal = $("#mname").val();
+					
+					if (!name.test(nameVal) && nameVal == ''){
+						
+						alert("	이름을 입력하셈!	>>> : ");
+						console.log("	이름을 입력하셈!	>>> : ");
+						
+						$("#mname").val('');
+						$("#mname").focus();
+					}
+				}); // end of mname
+				
+				$(document).on('click', '#mbirthBtn', function(){
+					
+					alert("	mbirthBtn 버튼 클릭해슴!	>>> : " + mbirthBtn);
+					console.log("	mbirthBtn 버튼 클릭해슴!	>>> : " + mbirthBtn);
+					
+					let birth =  /^(19[0-9][0-9]|20\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/;;
+					let birthVal = $("#mbirth").val();
+					
+					if (!birth.test(nameVal) && birthVal == ''){
+						
+						alert("	생일 오류가 발생해슴!	0000 - 00 - 00 형식!");
+						console.log("	생일 오류가 발생해슴!	0000 - 00 - 00 형식!");
+						
+						$("#mbirth").val('');
+						$("#mbirth").focus();
+					}
+				}); // end of mbirthBtn
+				
+				$(document).on('click', '#midBtn', function(){
+					
+					alert("	midBtn 버튼 클릭해슴!	>>> : " + midBtn);
+					console.log("	midBtn 버튼 클릭해슴!	>>> : " + midBtn);
+					
+					let idVal = $("#mid").val().length;
+					
+					if (idVal < 6 || idVal > 8){
+						
+						alert("	아이디 오류! -- 6자 이상 8자 미만이어야함!");
+						console.log("	아이디 오류! -- 6자 이상 8자 미만이어야함!");
+						
+						$("#mid").val('');
+						$("#mid").focus();
+					}
+				}); // end of midBtn
+				
+				$(document).on('click', '#mpwBtn', function(){
+					
+					alert("	mpwBtn 버튼 클릭해슴!	>>> : " + mpwBtn);
+					console.log("	mpwBtn 버튼 클릭해슴!	>>> : " + mpwBtn);
+					
+					let pwVal = $("#mpw").val().length;
+					
+					if (pwVal < 6 || pwVal >12){
+						
+						alert("	비밀번호 오류임! -- 6자 이상 12자 미만이어야 함! ");
+						console.log("	비밀번호 오류임! -- 6자 이상 12자 미만이어야 함! ");
+						
+						$("#mpw").val('');
+						$("#mpw").focus();
+					}
+				}); // end of mpwBtn
+				
+				$(document).on('change', '#mgender', function(){
+					
+					alert("	mgender 버튼 클릭해슴!	>>> : " + mgender);
+					console.log("	mgender 버튼 클릭해슴!	>>> : " + mgender);
+					$("#mgender").val('');
+					
+				}); // end of mgender
+				
+				$(document).on('change', '#memail', function(){
+					
+					alert("	memail 버튼 클릭해슴!	>>> : " + memail);
+					console.log("	memail 버튼 클릭해슴!	>>> : " + memail);
+					$("#memail").val('');
+					
+				}); // end of memail
+				
+				$(document).on('click', '#mphBtn', function(){
+					
+					alert("	mphBtn 버튼 클릭해슴!	>>> : " + mphBtn);
+					console.log("	mphBtn 버튼 클릭해슴!	>>> : " + mphBtn);
+					
+					let phone1Val = $("#mphone1").val();
+					let phone2Val = $("#mphone2").val();
+					let phone3Val = $("#mphone3").val();
+					
+					if (phone1Val != '010' ){
+						
+						alert("	핸드폰 번호 오류가 발생해슴!	>>> : 000 - 0000 - 0000 형식이어야 함");
+						console.log("	핸드폰 번호 오류가 발생해슴!	>>> : 000 - 0000 - 0000 형식이어야 함");
+						
+						$("#mphone1").val('');
+						$("#mphone1").focus();
+					}
+				}); // end of mphone
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div class = "container">
+			<h1>회원 가입 해슴!</h1>
+			<form name = "member" method = "POST">
+				<table class = "table table-bordered">
+					<tr>
+						<td class = "mem">회원번호는 ? : </td>
+						<td>
+							<input type = "text" id = "mno" name = "mno" disabled />
+						</td>
+					</tr>
+					<tr>
+						<td class = "mem"> 이름은 ? : </td>
+						<td>
+							<input type = "text" id = "mname" name = "mname" />
+							<input type = "button" id = "mnameBtn" name = "mnameBtn" value = "아이디 중복확인">
+						</td>
+					</tr>
+					<tr>
+						<td class = "mem">주소는 ? : </td>
+						<td>
+							<input type = "text" id = "maddrno" name = "maddrno" size = 6 />
+							<input type = "button" value = "우편번호" />(도로명 주소)<br>
+							<input type = "text" id = "maddr1" name = "maddr1" size = 35 readonly /><br>
+							<input type = "text" id = "maddr2" name = "maddr2" size = 35 /><br>
+						</td>
+					</tr>
+					<tr>
+						<td class = "mem">생일은 ? : </td>
+						<td>
+							<input type = "text" id = "mbirth" name = "mbirth" value = "0000-00-00 형식으로!" />
+							<input type = "button" id = "mbirthBtn" name = "mbirthBtn" value = "생일확인">
+						</td>
+					</tr>
+					<tr>
+						<td class = "mem">아이디는 ? (6 ~ 8 문자!) : </td>
+						<td>
+							<input type = "text" id = "mid" name = "mid" />
+							<input type = "button" id = "midBtn" name = "midBtn" value = "아이디 중복 확인" />
+						</td>
+					</tr>
+					<tr>
+					<td class="mem"> 비밀번호 :  </td> 
+						<td>
+							<input type="text" id="mpw" name="mpw" /><br>
+							<input type="text" id="mpw_r" name="mpw_r" />
+							<input type="button" id = "mpwBtn" name = "mpwBtn" value="비밀번호확인" />
+						</td>
+					</tr>
+					<tr>
+						<td class = "mem">성별은 ? :</td>
+						<td>
+							<select id = "mgender" name = "mgender">
+								<option value = "sel">
+									--- 성별 ---
+								</option>
+								<option value = "male">
+									남성
+								</option>
+								<option value = "female">
+									여성
+								</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class = "mem">이메일은 ? : </td>
+						<td>
+							<input type = "text" id = "memail0" name = "memail0" value = "" size = 10 onfocus = "this.value=''" />@
+							<input type = "text" id = "memail1" name = "memail1" value = "" size = 10  readonly />
+							<select name = "memail" name = "memail">
+								<option>이메일 선택</option>
+								<option>gmail.com</option>
+								<option>naver.com</option>
+								<option>daum.net</option>
+							</select> 
+						</td>
+					</tr>
+					<tr>
+						<td class = "mem"> 휴대폰은 ? : </td>
+						<td>
+							<input type = "text" id = "mphone1" name = "mphone1" style = "width : 50px;" maxlength = "3"/> -
+ 							<input type = "text" id = "mphone2" name = "mphone2" style = "width : 50px;" maxlength = "4"/> -
+							<input type = "text" id = "mphone3" name = "mphone3" style = "width : 50px;" maxlength = "4"/>
+							<input type = "button" id = "mphBtn" name = "mphBtn" value="휴대폰 번호 확인" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan = 2 align = "center">
+							<input type = "hidden" name = "ISUD_TYPE" id = "ISUD_TYPE" value = "I" >
+							<input type = "button" name = "okBtn" id = "okBtn" value = "확인" >
+							<input type = "reset" value = "다시">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>
