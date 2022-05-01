@@ -1,9 +1,24 @@
-<mxfile host="app.diagrams.net" modified="2022-05-01T08:29:01.397Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="FiIE17jf3Fmzy6hiZvaZ" version="17.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-01T08:58:56.512Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="gYolgR0DCdqPMwuu8SYn" version="17.5.0" type="github">
   <diagram id="-ZvOjpscCobrFBngYK_b" name="Page-1">
-    <mxGraphModel dx="545" dy="784" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+    <mxGraphModel dx="480" dy="784" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="j9IHQ2iL0ufM8WqTDq_p-1" value="Index.html&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="j9IHQ2iL0ufM8WqTDq_p-2" value="board.html&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="30" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="j9IHQ2iL0ufM8WqTDq_p-3" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" target="j9IHQ2iL0ufM8WqTDq_p-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="120" as="sourcePoint" />
+            <mxPoint x="80" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j9IHQ2iL0ufM8WqTDq_p-5" value="&lt;div&gt;&lt;span&gt;isudtype = I&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;true : boardInsert&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;false : board.html&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;align=center;" vertex="1" parent="1">
+          <mxGeometry x="240" y="200" width="240" height="410" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
